@@ -7,7 +7,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "esno scripts/prepare.ts"
+    "prepare": "esno scripts/prepare.ts",
+    "w": "pnpm build && npx wrangler dev --local"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
@@ -46,7 +47,6 @@
     "consola": "^2.15.3",
     "crawler": "^1.4.0",
     "cross-fetch": "^3.1.5",
-    "deta": "^1.1.0",
     "dexie": "^3.2.3",
     "floating-vue": "2.0.0-beta.20",
     "gpt-token-utils": "^1.2.0",
