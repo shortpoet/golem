@@ -7,7 +7,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "esno scripts/prepare.ts"
+    "prepare": "esno scripts/prepare.ts",
+    "pages:dev": "wrangler pages dev --compatibility-date=2024-01-17 --proxy 3000 -- pnpm run dev",
+    "pages:deploy": "pnpm run build && wrangler pages deploy ./.output"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
@@ -30,7 +32,8 @@
     "ignore-dependency-scripts": "^1.0.1",
     "nuxt": "3.3.1",
     "theme-vitesse": "^0.6.4",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "wrangler": "^3.22.5"
   },
   "dependencies": {
     "@bobthered/tailwindcss-palette-generator": "^3.1.1",
