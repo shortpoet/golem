@@ -1,0 +1,26 @@
+# flyctl launch added from .gitignore
+**/node_modules
+**/*.log*
+**/.nuxt
+**/.nitro
+**/.cache
+**/.output
+**/.env
+**/dist
+
+**/.space
+**/.vercel
+**/.DS_Store
+
+# flyctl launch added from .output/public/.gitignore
+.output/public/**/shiki
+
+# flyctl launch added from dist/.gitignore
+dist/**/shiki
+
+# flyctl launch added from node_modules/.pnpm/@dqbd+tiktoken@0.4.0/node_modules/@dqbd/tiktoken/dist/no-modules/.gitignore
+node_modules/.pnpm/@dqbd+tiktoken@0.4.0/node_modules/@dqbd/tiktoken/dist/no-modules/**/*
+
+# flyctl launch added from public/.gitignore
+public/**/shiki
+fly.toml
