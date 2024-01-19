@@ -7,6 +7,15 @@
 **/.output
 **/.env
 **/dist
+**/.nuxt
+**/.output
+**/.wrangler
+**/.git
+**/.github
+**/.gitignore
+compose.yaml
+Spacefile
+
 
 **/.space
 **/.vercel

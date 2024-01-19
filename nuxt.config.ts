@@ -64,30 +64,35 @@ export default defineNuxtConfig({
       __DEV__: process.env.NODE_ENV === "development",
     },
     build: {
-      rollupOptions: {
-        external: [
-          "vue",
-          "vue-demi",
-          "vue-router",
-          "vue-i18n",
-          "unctx",
-          "@vueuse/core",
-          "@unhead/vue",
-          // "vue/server-renderer",
-        ],
-      },
+      // rollupOptions: {
+      //   external: [
+      //     "vue",
+      //     "vue-router",
+      //     "unctx",
+      //     "@vueuse/core",
+      //     "@unhead/vue",
+      //     "vue/server-renderer",
+      //   ],
+      // },
+      // output: {
+      //   // Provide global variables to use in the UMD build
+      //   // for externalized deps
+      //   globals: {
+      //     vue: "Vue",
+      //   },
+      // },
     },
   },
-  // hooks: {
-  //   "vite:extendConfig": function (config, { isServer }) {
-  //     if (isServer) {
-  //       const alias = config.resolve!.alias as Record<string, string>;
-  //       for (const dep of ["shiki-es", "fuse.js"]) {
-  //         alias[dep] = "unenv/runtime/mock/proxy";
-  //       }
-  //     }
-  //   },
-  // },
+  hooks: {
+    "vite:extendConfig": function (config, { isServer }) {
+      if (isServer) {
+        const alias = config.resolve!.alias as Record<string, string>;
+        for (const dep of ["shiki-es", "fuse.js"]) {
+          alias[dep] = "unenv/runtime/mock/proxy";
+        }
+      }
+    },
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
